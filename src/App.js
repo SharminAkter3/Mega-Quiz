@@ -5,6 +5,7 @@ import Topics from "./Components/Topics/Topics";
 import Statistics from "./Components/Statistics/Statistics";
 import Blog from "./Components/Blog/Blog";
 import Quiz from './Components/Quiz/Quiz';
+import ErrorPage from './ErrorPage/ErrorPage';
 
 function App() {
   const router = createBrowserRouter([
@@ -27,10 +28,10 @@ function App() {
           element: <Topics></Topics>
         },
         {
-          path: '/quiz',
+          path: '/quiz/:id',
           loader: async ({ params }) => {
             console.log(params);
-            return fetch(`https://openapi.programming-hero.com/api/quiz/0${id}`);
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`);
           },
           element: <Quiz></Quiz>
         },
@@ -44,7 +45,10 @@ function App() {
         }
       ]
     },
-    { path: '*', element: <div>This Route note found</div> }
+    {
+      path: '*',
+      element: <ErrorPage></ErrorPage>
+    }
   ])
 
   return (
