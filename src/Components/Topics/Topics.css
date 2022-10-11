@@ -10,9 +10,9 @@
     height: 380px;
     justify-items: center;
     align-items: center;
-    font-weight: 600;
-    font-size: x-large;
-    margin: 40px;
+    font-weight: 300;
+    font-size: large;
+    margin: 30px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
@@ -21,7 +21,7 @@
 .button {
     background-color: rgb(127, 127, 241);
     margin: 10px;
-    font-weight: 600;
+    font-weight: 400;
     font-size: large;
     padding: 5px;
     border-radius: 10px;

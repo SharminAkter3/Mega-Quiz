@@ -1,27 +1,24 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Question from '../Question/Question';
+import { Row } from 'react-bootstrap';
 
 const Quiz = () => {
-    const questions = useLoaderData();
-    const quiz = questions.data;
-    console.log(quiz);
+    const data = useLoaderData();
+    const quizs = data.data;
+    const quizQuestions = data.data.questions;
+    console.log(quizQuestions);
 
-    // const { id, question } = questions
-    // console.log(questions.data.questions);
     return (
-
-        <div>
-            <h1>This is quiz page :{quiz.length}</h1>
-            <div className='question-container'>
-                {/* {
-                    questions.map(question => <Question
-                        key={question.id}
-                        question={question}
-                    ></Question>)
-                } */}
-            </div>
+        <div className='question-container'>
+            <Row xs={1} className='g-4 mb-5'>
+                <h2 className='text-center mt-5 fw-bolder'>Quiz of <span className='text-warning'>{quizs.name}</span></h2>
+                {
+                    quizQuestions.map((questions, index) => <Question key={index} index={index} questions={questions} />)
+                }
+            </Row>
         </div>
+
 
     );
 };

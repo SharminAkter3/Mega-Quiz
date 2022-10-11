@@ -1,12 +1,15 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useContext } from 'react';
 import Item from '../Item/Item';
 import './Topics.css'
+import { useLoaderData } from 'react-router-dom';
+import { ItemContext } from '../Main/Main';
+
 
 const Topics = () => {
-    const loadData = useLoaderData();
-    const items = loadData.data;
-    console.log(items);
+    const items = useContext(ItemContext);
+
+    const data = items.data;
+    // console.log(data);
 
     return (
         <div>
@@ -17,7 +20,7 @@ const Topics = () => {
             </div>
             <div className='item-container'>
                 {
-                    items.map(item => <Item
+                    data.map(item => <Item
                         key={item.id}
                         item={item}
                     ></Item>)
