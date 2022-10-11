@@ -3,22 +3,26 @@ import { useLoaderData } from 'react-router-dom';
 import Question from '../Question/Question';
 
 const Quiz = () => {
-    const clickData = useLoaderData();
-    const { data } = clickData;
-    const { questions } = data;
-    console.log(questions);
+    const questions = useLoaderData();
+    const quiz = questions.data;
+    console.log(quiz);
+
+    // const { id, question } = questions
+    // console.log(questions.data.questions);
     return (
+
         <div>
-            <h1>This is quiz page :{data.length}</h1>
+            <h1>This is quiz page :{quiz.length}</h1>
             <div className='question-container'>
                 {/* {
-                    questions.map(question => <div>
-                        <h1>Question : {question.question}</h1>
-                    </div>
-                    )
+                    questions.map(question => <Question
+                        key={question.id}
+                        question={question}
+                    ></Question>)
                 } */}
             </div>
         </div>
+
     );
 };
 

@@ -1,10 +1,11 @@
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { Link, useLoaderData } from 'react-router-dom';
 import './Item.css';
 
 const Item = ({ item }) => {
-    const { name, logo, total } = item;
+    const { id, name, logo, total } = item;
     return (
         <div>
             <div className='item'>
@@ -15,6 +16,7 @@ const Item = ({ item }) => {
                 </div>
             </div>
         </div>
+
     );
 };
 

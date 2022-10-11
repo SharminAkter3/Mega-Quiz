@@ -4,8 +4,10 @@ import Item from '../Item/Item';
 import './Topics.css'
 
 const Topics = () => {
-    const items = useLoaderData();
-    // console.log(items);
+    const loadData = useLoaderData();
+    const items = loadData.data;
+    console.log(items);
+
     return (
         <div>
             <div className='text-center p-5 m-5'>
@@ -15,7 +17,7 @@ const Topics = () => {
             </div>
             <div className='item-container'>
                 {
-                    items.data.map(item => <Item
+                    items.map(item => <Item
                         key={item.id}
                         item={item}
                     ></Item>)
