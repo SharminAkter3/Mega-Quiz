@@ -30,7 +30,7 @@ function App() {
           path: '/quiz',
           loader: async ({ params }) => {
             console.log(params);
-            return fetch(`https://openapi.programming-hero.com/api/quiz`);
+            return fetch(`https://openapi.programming-hero.com/api/quiz/0${id}`);
           },
           element: <Quiz></Quiz>
         },
