@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import './Item.css';
 
 const Item = ({ item }) => {
-    const { id, name, logo, total } = item;
+    const { id, name, logo } = item;
     const navigate = useNavigate();
     const questionDetails = () => {
         navigate(`/quiz/${id}`);

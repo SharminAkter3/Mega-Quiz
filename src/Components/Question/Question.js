@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import Option from './Option/Option'
 
 const Question = ({ questions, index }) => {
-    const { options, id, question, correctAnswer } = questions;
+    const { options, question, correctAnswer } = questions;
 
     // check correct ans
     const correctAnshandler = (option) => {

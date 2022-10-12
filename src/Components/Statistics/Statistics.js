@@ -1,4 +1,4 @@
-import React, { useContext, PureComponent } from 'react';
+import React, { useContext } from 'react';
 import { ItemContext } from '../Main/Main';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 

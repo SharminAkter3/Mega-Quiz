@@ -5,9 +5,7 @@ import Topics from "./Components/Topics/Topics";
 import Statistics from "./Components/Statistics/Statistics";
 import Blog from "./Components/Blog/Blog";
 import Quiz from './Components/Quiz/Quiz';
-import Question from './Components/Question/Question';
 import ErrorPage from './ErrorPage/ErrorPage';
-import Item from './Components/Item/Item';
 
 function App() {
   const router = createBrowserRouter([
