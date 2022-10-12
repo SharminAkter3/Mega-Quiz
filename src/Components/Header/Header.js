@@ -1,10 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css'
-// import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 
 const Header = () => {
-    // const [open, setOpen] = useState(false);
     return (
         <nav className='md:flex header'>
             <div>
