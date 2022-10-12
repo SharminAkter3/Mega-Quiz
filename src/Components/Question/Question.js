@@ -2,11 +2,10 @@ import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 import { EyeIcon } from '@heroicons/react/24/solid'
 import { toast } from 'react-toastify';
-import { removeTages } from 'react-string-replace';
 import Option from './Option/Option'
 
 const Question = ({ questions, index }) => {
-    const { option, id, question, correctAnswer } = questions;
+    const { options, id, question, correctAnswer } = questions;
 
     // check correct ans
     const correctAnshandler = (option) => {
@@ -23,8 +22,6 @@ const Question = ({ questions, index }) => {
         toast.success(`Correct ans is : ${correctAnswer}`, { autoClose: 1000 });
     }
 
-    const ques = removeTages(question)
-
     // question dynamic serial
 
     if (index >= 0) {
@@ -37,10 +34,10 @@ const Question = ({ questions, index }) => {
 
                 <Card.Body>
                     <div className='relative'>
-                        <Card.Title className='text-center text-danger'> Quiz No {index} : {ques}</Card.Title>
-                        <EyeIcon onClick={showCorrectAns} style={{ width: "20px", position: 'absolute', top: '15px', right: '5' }}></EyeIcon>
+                        <Card.Title className='text-center text-primary'> Quiz No {index} : {question}</Card.Title>
+                        <EyeIcon onClick={showCorrectAns} style={{ width: "20px", position: 'absolute', top: '15px', right: '5px' }}></EyeIcon>
                     </div>
-                    <div className='row row-cols-md-2 gap-4'>
+                    <div className='row row-cols-md-3 row-cols-sm-1 gap-3'>
 
                         {
                             options.map((option, index) => <Option key={index} option={option} correctAnshandler={correctAnshandler}></Option>)
