@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import Item from '../Item/Item';
 import './Topics.css'
-import { useLoaderData } from 'react-router-dom';
 import { ItemContext } from '../Main/Main';
 
 

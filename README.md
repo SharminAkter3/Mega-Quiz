@@ -2,10 +2,12 @@
 
 => My Projects Code Link : 'https://github.com/programming-hero-web-course2/b6-quiz-crackerz-SharminAkter3';
 
+=> Uses API Link : 'https://openapi.programming-hero.com/api/quiz';
+
 Live Website Link : '';
 
 
-<h1> I can test my web development skills with this projects. The test contains 40 questions and there is no time limit.  The test is not official, it's just a nice way to see how much i know, or don't know, about web development.</h1>
+=> I can test my web development skills with this projects. The test contains 40 questions and there is no time limit.  The test is not official, it's just a nice way to see how much i know, or don't know, about web development.
 
 
 => Working Procedure :
